@@ -2,33 +2,29 @@ h1. Generic Meta-Commander
 
 This is a grandiosely named script namespacer.
 
-This script allows you to run your own custom scripts as commands
-without worrying about how the script names conflict with the
-environment's namespace. It's serves as a convenient way to
-organize frequently used scripts.
+This script allows you to run your own custom scripts as commands without worrying
+about how the script names conflict with the environment's namespace. It's serves
+as a convenient way to organize frequently used scripts.
 
-This script will run any custom script, as long as that script's
-environment executable is available to the shell.
+This script will run any custom script, as long as that script's environment
+executable is available to the shell.
 
-1. Configure @SEARCH_DIRS@, the program's list of specified
-search directories. This is where @gmc.py@ will look for
-commands.
+1. Configure @SEARCH_DIRS@, the program's list of specified search directories.
+This is where @gmc.py@ will look for commands.
 
-2. Configure @CMD_FILETYPES@. This is a dictionary with
-filename:environment_executable pairs. As long as the environment
-executable is available to the shell, you can put anything here:
-ruby, python, sh, perl, along with any command switches you wish
-to associate with the specified filename.
+2. Configure @CMD_FILETYPES@. This is a dictionary with filename:environment_executable
+pairs. As long as the environment executable is available to the shell, you can
+put anything here: ruby, python, sh, perl, along with any command switches you
+wish to associate with the specified filename.
 
-3. Create a directory named after the command you wish to run within
-one of the specified @SEARCH_DIRS@.
+3. Create a directory named after the command you wish to run within one of the
+specified @SEARCH_DIRS@.
 
-4. Drop your script in the newly created command directory. Be sure
-to name your script whatever has been configured in
-@CMD_FILETYPES@.
+4. Drop your script in the newly created command directory. Be sure to name your
+script whatever has been configured in @CMD_FILETYPES@.
 
-You'll likely want to make the script executable and then symlink it
-somewhere on your PATH:
+You'll likely want to make the script executable and then symlink it somewhere on
+your PATH:
 
 <pre>
 <code>
