@@ -32,11 +32,11 @@ def exec_cmd(cmd_list):
             print SEARCH_DIR_FALSE_TMPL.format(c_dir)
             continue
 
-        for cmd_type in CMD_FILETYPES.keys():
-            if os.path.exists(os.path.join(c_dir, cmd_list[0], cmd_type)):
+        for cmd in CMD_FILETYPES.keys():
+            if os.path.exists(os.path.join(c_dir, cmd_list[0], cmd)):
                 cmd_found = True
-                cmd_file  = cmd_type
-                cmd_path  = os.path.join(c_dir, cmd_list[0], cmd_type)
+                cmd_file  = cmd
+                cmd_path  = os.path.join(c_dir, cmd_list[0], cmd)
                 break
 
     if not cmd_found:
