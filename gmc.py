@@ -12,7 +12,7 @@ SEARCH_DIRS             = ['/Users/gmcclure/bin/gmc_src']
 CMD_NOT_FOUND_MSG       = 'Command not found in following directories:'
 CMD_NOT_FOUND_LIST_TMPL = ' -> {}'
 ERR_CODE_TMPL           = 'Error code {} -> {}'
-NO_CMD_MSG              = 'No command to execute.\n'
+NO_CMD_MSG              = 'No command given.\n'
 SEARCH_DIR_FALSE_TMPL   = 'Search directory "{}" does not exist.'
 
 parser = argparse.ArgumentParser(description='Namespace custom scripts.')
